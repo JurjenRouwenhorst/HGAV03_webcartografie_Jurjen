@@ -1,1 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background-color:rgb(228, 233, 239);
+}
+
+#header {
+    background-image: url(img/championsleague.jpg);
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+
+}
+
+#Leaflet-Map {
+    height: 50%;
+    width: 50%;
+}
