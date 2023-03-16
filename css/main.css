@@ -21,7 +21,7 @@
 }
 /*logo linksboven*/
 .logo {
-    width: 120px;
+    width: 70px;
     cursor:pointer;
 }
 /*navigatie menu*/
@@ -40,7 +40,7 @@
     content: '';
     height: 3px;
     width: 0%;
-    background: #009688;
+    background: #ED3AFB;
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -51,7 +51,8 @@
 }
 /*introductie website*/
 .content{
-    width: 100%;
+    width: 50%;
+    margin-left: 25%;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -60,19 +61,20 @@
 }
 .content h1{
     font-size: 70px;
-    margin-top: 80px;
+    margin-top: 160px;
 }
 .content p{
-    margin: 20% auto;
+    margin: 10% auto;
     font-weight: 100;
     line-height: 25px;
 }
 /*inhoud website*/
 body {
-    background-color: purple;
+    background-color: rgb(3, 20, 72);
 }
 /*kaarten*/
 #maps {
-    height: 50%;
-    width: 50%;
+    height: 200px;
+    width: 200px;
+    margin: 50px;
 }
