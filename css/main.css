@@ -73,8 +73,8 @@ body {
     background-color: rgb(3, 20, 72);
 }
 /*kaarten*/
-#maps {
-    height: 200px;
-    width: 200px;
+.maps {
+    height: 60vh;
+    width: 30vw;
     margin: 50px;
 }
