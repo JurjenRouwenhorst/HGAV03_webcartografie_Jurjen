@@ -97,3 +97,11 @@ const View = new MapView({
   container: "arcgismap",
 });
 });
+
+L.tileLayer.wms('http://localhost:8001/geoserver/HGAV03/wms' , {
+    'layers': 'HGAV03:gemeente_2021_v1',
+    'styles' : 'polygon',
+    'srs' : 'EPSG:28992',
+    'format' : 'image/png',
+    'opacity' : 0.5
+}).addTo(LeafletMap);
