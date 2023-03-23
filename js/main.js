@@ -79,3 +79,21 @@ const openLayersMap = new ol.Map({
         zoom: 15
     })
 });
+
+//ArcGIS kaart
+
+require(["esri/config", "esri/Map", "esri/views/MapView"], function (esriConfig, Map, MapView){
+
+
+esriConfig.apiKey = "AAPK51a78e947c32420487388b9fa12e8abbRXew2C1FTRS8pe4Df1jGu-vvD-4M0NDeAlbgs-Ryf8HBScsKsBI3UF4zCOsoaFyg";
+const arcgismap = new Map({
+  basemap: "arcgis-topographic" // Basemap layer //
+});
+
+const View = new MapView({
+  map: arcgismap,
+  center: [-118.805, 34.027],
+  zoom: 13, // scale: 72223.819286 //
+  container: "arcgismap",
+});
+});
