@@ -1,15 +1,5 @@
-// comment //
-// alert('Hello,world');
-// console.log('Hello world!');
-// let message;
-// message = 'Hello';
-// alert(message);
-
-
-
-
 // Leafletkaart
-const LeafletMap = L.map('Leaflet-Map').setView([51.505, -0.09], 13);
+const LeafletMap = L.map('leafletmap').setView([51.505, -0.09], 13);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -66,7 +56,7 @@ fetch(mijnEersteAPIRequest, {})
 
 //OpenLayerskaart
 const openLayersMap = new ol.Map({
-    target: 'openLayers-map',
+    target: 'openLayersmap',
     layers: [
         new ol.layer.Tile({
             source: new ol.source.OSM()
@@ -79,6 +69,7 @@ const openLayersMap = new ol.Map({
         zoom: 15
     })
 });
+
 
 //ArcGIS kaart//
 
@@ -108,7 +99,7 @@ L.tileLayer.wms('http://localhost:8001/geoserver/HGAV03/wms' , {
 
 //Maplibre kaart//
 var maplibreMap = new maplibregl.Map({
-    container: 'maplibre',
+    container: 'maplibremap',
     style: 'https://demotiles.maplibre.org/style.json', // stylesheet location
     center: [-74.5, 40], // starting position [lng, lat]
     zoom: 9, // starting zoom
