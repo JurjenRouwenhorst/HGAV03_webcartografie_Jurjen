@@ -19,6 +19,10 @@
         <!--ArcGIS-->
         <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css">
         <script src="https://js.arcgis.com/4.26/"></script>
+        <!--Maplibre-->
+        <script src='https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js'></script>
+        <link href='https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css' rel='stylesheet' />
+
         <!--website naam-->
         <title>Jurjen zijn website</title>
     </head>
@@ -42,37 +46,48 @@
             </div>
         </div>
         <!--verschillende kaarten-->
-        <section class="maps">
-            <!--leaflet kaart-->
+        <!--leaflet kaart-->
+        <div class="map">
             <div id="Leaflet-Map">
-                <h2>Leafletkaart</h2>
+            </div>
+            <h2></h2>
                 <p>
                     
                 </p>
+        </div>
+        <!--openlayer kaart-->
+        <div class="map">
+            <div id="openLayermap">
             </div>
-            <!--openlayer kaart-->
-            <div>
-                <h2>Openlayerkaart</h2>
+            <h2></h2>
                 <p>
 
                 </p>
-            </div>
-            <!--arcgis kaart-->
+        </div>
+        <!--arcgis kaart-->
+        <div class="map">
             <div id="arcgismap">
-                <h2>Titel kaart</h2>
-                <p>
-
-                </p>
             </div>
-        </section>
-        
-        <!--javascript-->
-        <script src="./js/main.js"></script>
+            <h2></h2>
+            <p>
 
+            </p>
+        </div>
+        <!--maplibre kaart-->
+        <div class="map">
+            <div id="maplibre">
+            </div>
+            <h2></h2>
+            <p>
+
+            </p>
+        </div>
+        
         <!--Arc GIS kaart-->
         <script src="https://js.arcgis.com/4.26/"></script>
 
-
+        <!--javascript-->
+        <script src="./js/main.js"></script>
 
     </body>
 </html>

@@ -80,7 +80,7 @@ const openLayersMap = new ol.Map({
     })
 });
 
-//ArcGIS kaart
+//ArcGIS kaart//
 
 require(["esri/config", "esri/Map", "esri/views/MapView"], function (esriConfig, Map, MapView){
 
@@ -105,3 +105,11 @@ L.tileLayer.wms('http://localhost:8001/geoserver/HGAV03/wms' , {
     'format' : 'image/png',
     'opacity' : 0.5
 }).addTo(LeafletMap);
+
+//Maplibre kaart//
+var maplibreMap = new maplibregl.Map({
+    container: 'maplibre',
+    style: 'https://demotiles.maplibre.org/style.json', // stylesheet location
+    center: [-74.5, 40], // starting position [lng, lat]
+    zoom: 9, // starting zoom
+    });
