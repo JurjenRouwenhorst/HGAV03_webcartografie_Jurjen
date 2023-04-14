@@ -55,26 +55,41 @@ function tekenDataOpKaart(woonplaatsId) {
 
 
 //OpenLayerskaart
-var Openlayersmap = new ol.Map({
+var marker = new ol.Feature({
+    geometry: new ol.geom.Point(ol.proj.fromLonLat([6.231269471092657, 46.370761300379776])) // Lng/Lat van de marker
+});
+
+
+var iconStyle = new ol.style.Style({
+    image: new ol.style.Icon({
+        anchor: [0.5, 1],
+        src: 'https://openlayers.org/en/latest/examples/data/icon.png' // URL naar het icoonbestand
+    })
+});
+marker.setStyle(iconStyle);
+
+
+var markerLayer = new ol.layer.Vector({
+    source: new ol.source.Vector({
+        features: [marker]
+    })
+});
+
+
+var map = new ol.Map({
     target: 'openlayersmap',
     layers: [
         new ol.layer.Tile({
             source: new ol.source.OSM()
-        })
+        }),
+        markerLayer
     ],
     view: new ol.View({
-        center: ol.proj.fromLonLat([6.228468678305436, 46.38763062961695]),
-        zoom: 11
+        center: ol.proj.fromLonLat([6.231269471092657, 46.370761300379776]),
+        zoom: 12
     })
 });
 
-const apiKey = "AAPK51a78e947c32420487388b9fa12e8abbRXew2C1FTRS8pe4Df1jGu-vvD-4M0NDeAlbgs-Ryf8HBScsKsBI3UF4zCOsoaFyg";
-
-const basemapId = "ArcGIS:Streets";
-
-const basemapURL = "https://basemaps-api.arcgis.com/arcgis/rest/services/styles/" + basemapId + "?type=style&token=" + apiKey;
-
-olms(Openlayersmap, basemapURL);
 
 //ArcGIS kaart//
 
@@ -109,5 +124,29 @@ var maplibreMap = new maplibregl.Map({
     center: [5.646297572354539, 52.10074520726731], // starting position [lng, lat]
     zoom: 5.5, // starting zoom
 });
+//Maplibre marker en popup//
+//PSV//
+var popup = new maplibregl.Popup({ offset: 25 }).setText(
+    'Philips Stadion, PSV'
+);
+marker = new maplibregl.Marker()
+    .setLngLat([5.46738782790169, 51.44172503909564])
+    .setPopup(popup)
+    .addTo(maplibreMap);
+//Feyenoord//
+var popup = new maplibregl.Popup({ offset: 25 }).setText(
+    'De Kuip, Feyenoord'
+);
+marker = new maplibregl.Marker()
+    .setLngLat([4.523209986170994, 51.89378431312062])
+    .setPopup(popup)
+    .addTo(maplibreMap);
+//Ajax//
+var popup = new maplibregl.Popup({ offset: 25 }).setText(
+    'Johan Cruijff ArenA, Ajax'
+);
+marker = new maplibregl.Marker()
+    .setLngLat([4.9419426348314905, 52.31425318515478])
+    .setPopup(popup)
+    .addTo(maplibreMap);
 
-//datavisualisatie winnaars CL//

@@ -98,22 +98,27 @@ section {
     column-count: 2;
     column-width: 50%;
 }
+
 #europa {
     column-count: 2;
     column-width: 50%;
 }
+
 #stadions {
     column-count: 2;
     column-width: 50%;
 }
+
 #raalte {
     column-count: 2;
     column-width: 50%;
 }
+
 #clwinnaars {
     column-count: 1;
     column-width: 80%;
 }
+
 #cltopscorers {
     column-count: 1;
     column-width: 80%;
@@ -129,17 +134,24 @@ section {
     width: 100%;
     height: 300px;
 }
+
 #arcgismap {
     width: 100%;
     height: 300px;
 }
+
 #openlayersmap {
     width: 100%;
     height: 300px;
 }
+
 #maplibremap {
     width: 100%;
     height: 300px;
+}
+
+.mapboxgl-popup-content {
+    color: #000000;
 }
 
 /*datavisualisaties*/
