@@ -1,21 +1,32 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /*inhoud website*/
 body {
     background-color: rgb(3, 20, 72);
 }
+
+section {
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-bottom: 50px;
+    margin-right: 10%;
+    color: #fff;
+}
+
 /*header van de website*/
 /*width en height kunnen niet beide 100% zijn*/
 .banner {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75,)), url("img/championsleague.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75, )), url("/img/championsleague.jpg");
     background-size: cover;
     background-position: center;
 }
+
 .navbar {
     width: 85%;
     margin: auto;
@@ -24,11 +35,13 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+
 /*logo linksboven*/
 .logo {
     width: 70px;
-    cursor:pointer;
+    cursor: pointer;
 }
+
 /*navigatie menu*/
 .navbar ul li {
     list-style: none;
@@ -36,12 +49,14 @@ body {
     margin: 0 20px;
     position: relative;
 }
+
 .navbar ul li a {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
 }
-.navbar ul li::after{
+
+.navbar ul li::after {
     content: '';
     height: 3px;
     width: 0%;
@@ -51,11 +66,13 @@ body {
     bottom: -10px;
     transition: 0.5s;
 }
-.navbar ul li:hover::after{
+
+.navbar ul li:hover::after {
     width: 100%;
 }
+
 /*introductie website*/
-.intro{
+.intro {
     width: 50%;
     margin-left: 25%;
     position: absolute;
@@ -64,23 +81,69 @@ body {
     text-align: center;
     color: #fff;
 }
-.intro h1{
+
+.intro h1 {
     font-size: 70px;
     margin-top: 160px;
 }
-.intro p{
+
+.intro p {
     margin: 10% auto;
     font-weight: 100;
     line-height: 25px;
 }
 
-/*kaarten*/
-.map {
-    padding-top: 200px;
-    height: 200px;
-    width: 400px;
-    margin: 50px;
+/*verschillende onderdelen*/
+#uefa {
+    column-count: 2;
+    column-width: 50%;
 }
+#europa {
+    column-count: 2;
+    column-width: 50%;
+}
+#stadions {
+    column-count: 2;
+    column-width: 50%;
+}
+#raalte {
+    column-count: 2;
+    column-width: 50%;
+}
+#clwinnaars {
+    column-count: 1;
+    column-width: 80%;
+}
+#cltopscorers {
+    column-count: 1;
+    column-width: 80%;
+}
+
+/*tekstvakken*/
+.tekst {
+    padding-left: 10px;
+}
+
+/*kaarten*/
 #leafletmap {
-    
+    width: 100%;
+    height: 300px;
+}
+#arcgismap {
+    width: 100%;
+    height: 300px;
+}
+#openlayersmap {
+    width: 100%;
+    height: 300px;
+}
+#maplibremap {
+    width: 100%;
+    height: 300px;
+}
+
+/*datavisualisaties*/
+.datavisualisaties {
+    padding-top: 30px;
+
 }

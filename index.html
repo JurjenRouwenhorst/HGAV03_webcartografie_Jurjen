@@ -13,15 +13,18 @@
     <script src="https://cdn.jsdelivr.net/npm/terraformer"></script>
     <script src="https://unpkg.com/@terraformer/wkt"></script>
     <!--OpenLayers-->
-    <script src="https://cdn.jsdelivr.net/npm/ol@v7.3.0/dist/ol.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.3.0/ol.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol-mapbox-style@6.1.4/dist/olms.js"></script>
+
+
     <!--ArcGIS-->
     <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css">
-    <script src="https://js.arcgis.com/4.26/"></script>
+
     <!--Maplibre-->
     <script src='https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js'></script>
     <link href='https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css' rel='stylesheet' />
-
     <!--website naam-->
     <title>Jurjen zijn website</title>
 </head>
@@ -48,41 +51,119 @@
     </div>
     <!--verschillende kaarten-->
     <!--leaflet kaart-->
-    <div class="map">
+    <section id="raalte">
         <div id="leafletmap">
         </div>
-        <h2></h2>
-        <p>
-
-        </p>
-    </div>
-    <!--openlayer kaart-->
-    <div class="map">
-        <div id="openLayermap">
+        <div class="tekst">
+            <h2>SV Heeten</h2>
+            <p>
+                Ik ben opgegroeid in het dorp Heeten. Hier is mijn hobby voor voetbal ontstaan. Van kleins af aan heb
+                ik gevoetbald bij de voetbalclub SV Heeten. Met SV Heeten speel ik tegen andere teams in de regio vooral
+                in de Gemeente Raalte. De competitie bestaat vaak uit 12 teams uit de regio. Door deze interesse in
+                voetbal ben ik ook de sterkste competitie van de wereld gaan volgen, de “Champions League”. Op deze
+                website is informatie te vinden over de Champions League.
+            </p>
         </div>
-        <h2></h2>
-        <p>
-
-        </p>
-    </div>
+    </section>
     <!--arcgis kaart-->
-    <div class="map">
+    <section id="europa">
         <div id="arcgismap">
         </div>
-        <h2></h2>
-        <p>
-
-        </p>
-    </div>
+        <div class="tekst">
+            <h2>Europa</h2>
+            <p>
+                In de Champions League is er plek voor de 32 beste teams van Europa. Deze 32 clubs vechten het in het
+                hoofdtoernooi de “Champions League” uit wie de sterkste voetbalclub is van Europa. In de voorrondes is
+                er een deelname van 76 teams aan de Champions League waarin clubs zich proberen te kwalificeren door
+                middel van de kwalificatie rondes en zich zo te vestigen bij de beste 32 clubs. De hoogst geëindigde
+                clubs van de nationale competities in Europa mogen deelnemen aan de Champions League.
+            </p>
+        </div>
+    </section>
+    <!--openlayer kaart-->
+    <section id="uefa">
+        <div id="openlayersmap">
+        </div>
+        <div class="tekst">
+            <h2>UEFA</h2>
+            <p>
+                De Champions League is een internationaal voetbaltoernooi voor clubs. Het toernooi wordt georganiseerd
+                door de Union of European Football Associations (UEFA). De UEFA vertegenwoordigt de nationale
+                voetbalbonden van Europa, organiseert clubcompetities in Europa (UEFA Champions League, UEFA Europa
+                League, UEFA Europa Conference League, et cetera) en beheert het prijzengeld, regels en mediarechten
+                voor deze competities. Het is een van de zes continentale organisaties van de FIFA. De UEFA werd
+                opgericht op 5 juni 1954 en het hoofdkantoor is sinds 1995 gehuisvest in Nyon, Zwitserland.
+            </p>
+        </div>
+    </section>
     <!--maplibre kaart-->
-    <div class="map">
+    <section id="stadions">
         <div id="maplibremap">
         </div>
-        <h2></h2>
-        <p>
-
-        </p>
-    </div>
+        <div class="tekst">
+            <h2>Nederlandse winnaars Champions League</h2>
+            <p>
+                Nederlandse clubs wonnen het toernooi in totaal 6 keer: Feyenoord in 1970, AFC Ajax in 1971, 1972, 1973
+                en 1995, en PSV in 1988. De laatste grote prestatie van een Nederlandse club in de Champions League was
+                van Ajax in het seizoen 2018/19. Ajax stroomde in de tweede kwalificatieronde van het toernooi in. Ze
+                wonnen vervolgens drie ronden en kwamen zo de kwalificatie door en plaatste zich voor het hoofdtoernooi.
+                Vervolgens wist het door zeges op grote Europese clubs zoals drievoudig regerend kampioen Real Madrid en
+                Juventus de halve finale te bereiken. In de halve finale werden ze uitgeschakeld met 2-3 door Tottenham
+                Hotspurs.
+            </p>
+        </div>
+    </section>
+    <!--datavisualisaties-->
+    <section id="clwinnaars">
+        <div class="tekst">
+            <h2>Winnaars Champions League</h2>
+            <p>
+                Sinds de eerste editie in 1955 hebben veel legendarische teams de trofee gewonnen, waaronder Real
+                Madrid, FC Barcelona, AC Milan, Liverpool en Bayern München. De recente winnaars zijn Real Madrid
+                (2022), Chelsea FC (2021), FC Bayern München (2020), Liverpool FC (2019), Real Madrid (2018) en Juventus
+                (2017). Elk seizoen strijden de beste clubs in Europa om de befaamde Champions League-trofee en de titel
+                van Europees kampioen.
+            </p>
+        </div>
+        <div class="datavisualisaties">
+            <div class="infogram-embed" data-id="de507a21-b230-4e0a-8421-ff2eb6c9fdda" data-type="interactive"
+                data-title="Datavis2"></div>
+            <script>!function (e, i, n, s) { var t = "InfogramEmbeds", d = e.getElementsByTagName("script")[0]; if (window[t] && window[t].initialized) window[t].process && window[t].process(); else if (!e.getElementById(n)) { var o = e.createElement("script"); o.async = 1, o.id = n, o.src = "https://e.infogram.com/js/dist/embed-loader-min.js", d.parentNode.insertBefore(o, d) } }(document, 0, "infogram-async");</script>
+            <div
+                style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px">
+                <a href="https://infogram.com/de507a21-b230-4e0a-8421-ff2eb6c9fdda"
+                    style="color:#989898!important;text-decoration:none!important;" target="_blank">Winnaars Champions
+                    League</a><br><a href="https://infogram.com"
+                    style="color:#989898!important;text-decoration:none!important;" target="_blank"
+                    rel="nofollow">Infogram</a>
+            </div>
+        </div>
+    </section>
+    <section id="cltopscorers">
+        <div class="tekst">
+            <h2>Topscorers Champions League</h2>
+            <p>
+                De UEFA Champions League heeft enkele van de grootste voetballers aller tijden voortgebracht. Hieronder
+                in de datavisualisatie zijn de top 10 topscorers aller tijden in de Champions League weergegeven. Het is
+                opvallend dat de top 2 van de lijst, Ronaldo en Messi, ver boven de andere spelers uitsteken. Hun
+                rivaliteit heeft de afgelopen jaren veel aandacht gekregen en hun doelpuntentotalen in de Champions
+                League zijn daar een weerspiegeling van.
+            </p>
+        </div>
+        <div class="datavisualisaties">
+            <div class="infogram-embed" data-id="666f9b66-6b90-4c0d-a23d-ae127df70a29" data-type="interactive"
+                data-title="Untitled slide project"></div>
+            <script>!function (e, i, n, s) { var t = "InfogramEmbeds", d = e.getElementsByTagName("script")[0]; if (window[t] && window[t].initialized) window[t].process && window[t].process(); else if (!e.getElementById(n)) { var o = e.createElement("script"); o.async = 1, o.id = n, o.src = "https://e.infogram.com/js/dist/embed-loader-min.js", d.parentNode.insertBefore(o, d) } }(document, 0, "infogram-async");</script>
+            <div
+                style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px">
+                <a href="https://infogram.com/666f9b66-6b90-4c0d-a23d-ae127df70a29"
+                    style="color:#989898!important;text-decoration:none!important;" target="_blank">Topscorers Champions
+                    League
+                </a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;"
+                    target="_blank" rel="nofollow">Infogram</a>
+            </div>
+        </div>
+    </section>
 
     <!--Arc GIS kaart-->
     <script src="https://js.arcgis.com/4.26/"></script>
